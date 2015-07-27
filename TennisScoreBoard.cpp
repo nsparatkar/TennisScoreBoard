@@ -9,15 +9,14 @@ class TennisScoreBoard{
 	string displayedScore;
 	const string score[5] = {"0", "15", "30", "40"};
 	
-	void checkAdvantageLost(int i){
+	bool checkAdvantageLost(int i){
 		if(score_D == 4 && scoreSequence.at(i) == 'F'){
-			score_D--;
-			score_F--;
+			return true;
 		}
 		if(score_F == 4 && scoreSequence.at(i) == 'D'){
-			score_F--;
-			score_D--;
+			return true;
 		}
+		return false;
 	}
 	
 	bool playerAdvantage() {
@@ -50,7 +49,10 @@ class TennisScoreBoard{
 			}else{
 				score_F++;
 			}
-			checkAdvantageLost(i);
+			if( checkAdvantageLost(i) ){
+				score_D--;
+				score_F--;
+			}
 			updateScoreBoard();
 		}
 	}
