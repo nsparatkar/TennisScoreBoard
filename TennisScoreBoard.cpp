@@ -2,12 +2,12 @@
 using namespace std;
 
 class TennisScoreBoard{
-	
+
 	string scoreSequence;
 	int score_D;
 	int score_F;
-	string score[] = {"0", "15", "30", "40"};
 	string displayedScore;
+	const string score[] = {"0", "15", "30", "40"};
 
 	TennisScoreBoard(){
 		scoreSequence = "";
@@ -37,12 +37,21 @@ class TennisScoreBoard{
 			updateScoreBoard();
 		}
 	}
-	
+
 	public:
 	void displayScore(string scoreSequence){
 		this->scoreSequence = scoreSequence;
 		computeScore();
-		cout << displayedScore;
+		cout << displayedScore << endl;
 	}
-	
+
 };
+
+void main()
+{
+    string sequence0fPoints = "D F F D D F D D F F D F D F D";
+
+    TennisScoreBoard tennisGame = new TennisScoreBoard();
+    tennisGame.displayScore(sequence0fPoints);
+
+}
