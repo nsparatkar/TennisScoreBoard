@@ -6,6 +6,8 @@ class TennisScoreBoard{
 	string scoreSequence;
 	int score_D;
 	int score_F;
+	string score[] = {"0", "15", "30", "40"};
+
 	TennisScoreBoard(){
 		scoreSequence = "";
 		score_D = 0;
