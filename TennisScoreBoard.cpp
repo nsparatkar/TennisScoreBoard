@@ -9,6 +9,16 @@ class TennisScoreBoard{
 	string displayedScore;
 	const string score[] = {"0", "15", "30", "40"};
 
+	bool scoreDeuce() {
+		if(score_D == 3 && score_F == 3)
+			return true;
+		return false;
+	}
+
+	bool playerAdvantage() {
+		if(
+	}
+
 	TennisScoreBoard(){
 		scoreSequence = "";
 		score_D = 0;
@@ -40,6 +50,7 @@ class TennisScoreBoard{
 
 	public:
 	void displayScore(string scoreSequence){
+		computeScore();
 		this->scoreSequence = scoreSequence;
 		computeScore();
 		cout << displayedScore << endl;
@@ -49,10 +60,16 @@ class TennisScoreBoard{
 
 int main()
 {
+<<<<<<< HEAD
     string sequence0fPoints = "DFFDDFDDFFDFDFDFDDFDDFFDFFDF";
 
     TennisScoreBoard tennisGame = new TennisScoreBoard();
     tennisGame.displayScore(sequence0fPoints);
 
     return 0;
+=======
+    string sequence0fPoints = "D F F D D F D D F F D F D F D";
+    TennisScoreBoard tennisGame = new TennisScoreBoard();
+    tennisGame.displayScore(sequence0fPoints);
+>>>>>>> e4cea4ceb10edf96969c6f3558f28c860983d0ce
 }
