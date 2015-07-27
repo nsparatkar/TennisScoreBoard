@@ -7,9 +7,10 @@ class TennisScoreBoard{
 	int score_D;
 	int score_F;
 	string displayedScore;
-	const string score[5] = {"0", "15", "30", "40"};
-	
+	const string score[5] = {"0", "15", "30", "40","A"};
+
 	void checkAdvantageLost(int i){
+<<<<<<< HEAD
 		if(score_D == 4 && scoreSequence.at(i) == 'F'){
 			score_D--;
 			score_F--;
@@ -25,7 +26,7 @@ class TennisScoreBoard{
 			return true;
 		return false;
 	}
-	
+
 	void updateScoreBoard(){
 		
 		if(playerAdvantage()) {
@@ -40,8 +41,8 @@ class TennisScoreBoard{
 			displayedScore += " ";
 			displayedScore += score[score_F];
 		}
+
 	}
-	
 	void computeScore(){
 		for(int i = 0; i < scoreSequence.length(); i++){
 			displayedScore = "";
@@ -61,8 +62,8 @@ class TennisScoreBoard{
 		score_D = 0;
 		score_F = 0;
 		displayedScore = "0 - 0";
-	}	
-		
+	}
+
 	void displayScore(string scoreSequence){
 		this->scoreSequence = scoreSequence;
 		computeScore();
