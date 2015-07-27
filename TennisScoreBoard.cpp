@@ -24,3 +24,9 @@ class TennisScoreBoard{
 	}
 	
 };
+
+int main() {
+	TennisScoreBoard tennis_board();
+	tennis_board.displayScore("DFDDFD");
+	return 0;
+}
