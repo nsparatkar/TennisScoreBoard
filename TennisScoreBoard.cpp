@@ -14,18 +14,23 @@ class TennisScoreBoard{
 		return false;
 	}
 
+	bool playerAdvantage() {
+		if(
+	}
+
 	TennisScoreBoard(){
 		scoreSequence = "";
 		score_D = 0;
 		score_F = 0;
 	}
 	
-	string computeScore(){
+	void computeScore(){
 		
 	}
 	
 	public:
 	void displayScore(string scoreSequence){
+		computeScore();
 		this->scoreSequence = scoreSequence;
 	}
 	
