@@ -25,11 +25,11 @@ class TennisScoreBoard{
 	}
 
 	void computeScore(){
-		for(int i = 0; i < scoreSequence.length(); i++){
+		for (int i = 0; i < scoreSequence.length(); i++) {
 			displayedScore = "";
-			if(scoreSequence[i] == 'D'){
+			if (scoreSequence[i] == 'D') {
 				score_D++;
-			}else{
+			} else {
 				score_F++;
 			}
 			checkAdvantageLost(i);
