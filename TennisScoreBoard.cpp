@@ -61,7 +61,6 @@ class TennisScoreBoard{
 
 	public:
 	void displayScore(string scoreSequence){
-		computeScore();
 		this->scoreSequence = scoreSequence;
 		computeScore();
 		cout << displayedScore << endl;
