@@ -16,7 +16,11 @@ class TennisScoreBoard{
 	}
 
 	bool playerAdvantage() {
-		if(
+		if(score_D == 4 && score_F == 3)
+			return true;
+		if(score_D == 3 && score_F == 4)
+			return true;
+		return false;
 	}
 
 	TennisScoreBoard(){
@@ -27,9 +31,16 @@ class TennisScoreBoard{
 	}
 	
 	void updateScoreBoard(){
-		displayScore += score[score_D];
-		displayScore += " ";
-		displayScore += score[score_F];
+		if(playerAdvantage()) {
+			if(score_D > score_F)
+				displayedScore = "A - 40";
+			else
+				displayedScore = "40 - A";
+		} else {
+			displayedScore += score[score_D];
+			displayedScore += " ";
+			displayedScore += score[score_F];
+		}
 	}
 	
 	void computeScore(){
