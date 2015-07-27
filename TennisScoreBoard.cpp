@@ -29,7 +29,7 @@ class TennisScoreBoard{
 		score_F = 0;
 		displayedScore = "0 - 0";
 	}
-	
+
 	void updateScoreBoard(){
 		if(playerAdvantage()) {
 			if(score_D > score_F)
@@ -42,7 +42,7 @@ class TennisScoreBoard{
 			displayedScore += score[score_F];
 		}
 	}
-	
+
 	void computeScore(){
 		for(char scorer : scoreSequence){
 			displayedScore = "";
@@ -69,9 +69,12 @@ class TennisScoreBoard{
 
 };
 
-void main()
+int main()
 {
-    string sequence0fPoints = "D F F D D F D D F F D F D F D";
+    string sequence0fPoints = "DFFDDFDDFFDFDFDFDDFDDFFDFFDF";
+
     TennisScoreBoard tennisGame = new TennisScoreBoard();
     tennisGame.displayScore(sequence0fPoints);
+
+    return 0;
 }
