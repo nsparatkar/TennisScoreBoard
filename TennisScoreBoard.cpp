@@ -26,3 +26,12 @@ class TennisScoreBoard{
 	}
 
 };
+
+void main()
+{
+    string sequence0fPoints = "D F F D D F D D F F D F D F D";
+
+    TennisScoreBoard tennisGame = new TennisScoreBoard();
+    tennisGame.displayScore(sequence0fPoints);
+
+}
