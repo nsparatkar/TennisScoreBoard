@@ -42,8 +42,8 @@ class TennisScoreBoard{
 	}
 
 	void updateScoreBoard(){
-		bool deuceReached = (score_D <= 3 && score_F <= 3);
-		if(!deuceReached) {
+		bool deuceReached = !(score_D <= 3 && score_F <= 3);
+		if(deuceReached) {
 			bool gameWon = abs(score_D - score_F) >= 2;
 			bool playerHasAdvantage = abs(score_D - score_F) == 1;
 			if(gameWon) {
